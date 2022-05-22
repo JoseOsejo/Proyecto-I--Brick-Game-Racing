@@ -1,20 +1,22 @@
-#include<iostream>
+
 #ifndef game_h_
 #define game_h_
 
-struct point {
-	int x,y,z;
-};
-const int targetScore[4] = {20,40,70,7000};
-const int numCar = 5;
-int min(int x , int y);
-int max(int x , int y);
-class Game 
+struct point 
 {
- 
+	int x, y, z;
+};
+
+int min(int x, int y);
+int max(int x, int y);
+const int targetScore[4] = { 20,40,70,7000 };
+const int numCar = 5;
+
+class Game
+{
 	int speed = 4;
-	point posBg = {0,550};
-	point posCar = {250,400};
+	point posBg = { 0,550 };
+	point posCar = { 250,400 };
 	point police[numCar];
 	bool played = false;
 	int score = 0;
